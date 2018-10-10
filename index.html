@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculadora</title>
+	<link rel="stylesheet" type="text/css" href="stylo.css">
+</head>
+<body>
+	
+	<h1>Calculadora</h1>
+	<div class="caixa-numero">
+		<label>Numero 1:</label><input id ="n1" type="text" name="n1">
+	</div>
+	<div class="caixa-numero">
+		<label>Numero 2:</label><input id="n2" type="text" name="n2">			
+	</div>
+	<div class="caixa-numero resultado">
+		Resultado: <span id="resultado"></span>
+	</div>
+	<button onclick="somar()" class="botao">Somar</button>
+	<button onclick="subtrair()" class="botao">Subtrair</button>
+	<button onclick="multiplicar()" class="botao">Multiplicar</button>
+	<button onclick="dividir()" class="botao">Dividir</button>
+
+</body>
+<script type="text/javascript">
+
+	var n1 = document.querySelector('#n1')
+	var n2 = document.querySelector('#n2')
+	var tag_resultado = document.querySelector('#resultado')
+	function somar(){
+
+		var resultado = parseInt(n1.value) + parseInt (n2.value)
+		tag_resultado.textContent = resultado
+		return false;
+	}
+
+	function subtrair(){
+		var resultado = parseInt(n1.value) - parseInt (n2.value)
+		tag_resultado.textContent = resultado
+		return false;
+	}
+
+	function multiplicar(){
+		var resultado = parseInt(n1.value) * parseInt (n2.value)
+		tag_resultado.textContent = resultado
+		return false;
+
+	}
+
+	function dividir(){
+		if ( n2.value == 0 || isNaN(parseInt(n2.value))) {
+			alert('teucu')
+			return 
+		}
+		if (isNaN(parseInt(n1.value))) {
+			alert('erooo')
+			return
+		}
+		var resultado = parseInt(n1.value) / parseInt (n2.value)
+
+		tag_resultado.textContent = resultado
+		return false;
+
+			}
+
+</script>
+</html>

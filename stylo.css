@@ -1,0 +1,32 @@
+html{
+	background: #2196f3;
+}
+body{
+	width: 500px;
+	margin: 0 auto;
+	font-family: Arial;
+}
+h1{
+	text-align: center;
+	font-size: 70px;
+}
+.caixa-numero{
+	margin: 10px;
+}
+label{
+	font-size: 18px;
+}
+
+#n1, #n2{
+	padding: 10px;
+	border-radius: 4px;
+}
+.resultado{
+	font-size: 24pt;
+	background: #f7e560;
+	border: 3px dotted black;
+}
+.botao{
+	padding: 7px;
+	border-radius: 10px;
+}
